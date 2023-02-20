@@ -35,6 +35,14 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  get: 4.6.5
+  dio: ^4.0.6
+  flutter_dotenv: ^5.0.2
+  get_storage: null
+  connectivity_plus: ^2.2.0
+  flutter_switch: ^0.3.2
+  flutter_overlay_loader: ^2.0.0
+
 
 dev_dependencies:
   flutter_test:
@@ -57,6 +65,15 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  fonts:
+    - family: Satoshi
+      fonts:
+        - asset: assets/fonts/Satoshi-Light.otf
+
+
+  assets:
+    - development.env
 
   # To add assets to your application, add an assets section, like this:
   # assets:
