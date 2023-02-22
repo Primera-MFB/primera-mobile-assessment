@@ -1,6 +1,5 @@
 import 'package:app/ui/screens/account/account.dart';
 import 'package:app/ui/shared/cubit/theme/theme_cubit.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,18 +22,12 @@ class ThemeMenuGroup extends StatelessWidget {
                 itemName: context.read<ThemeCubit>().themeModeName,
                 iconData: Icons.phonelink_setup,
                 trailing: Switch.adaptive(
-                  key: const ValueKey('theme-switch'),
-                  activeColor: Theme.of(context).primaryColor,
-                  value: context.read<ThemeCubit>().isDarkMode,
-                  onChanged: (value) {
-                    if (kDebugMode) {
-                      print('Dark mode: $value');
-                    }
-                    context
+                    key: const ValueKey('theme-switch'),
+                    activeColor: Theme.of(context).primaryColor,
+                    value: context.read<ThemeCubit>().isDarkMode,
+                    onChanged: (value) => context
                         .read<ThemeCubit>()
-                        .switchTheme(value ? ThemeDark() : ThemeLight());
-                  },
-                ),
+                        .switchTheme(value ? ThemeDark() : ThemeLight())),
               );
             },
           )

@@ -25,7 +25,7 @@ class _CheckUpdateState extends State<CheckUpdate> {
                   : kDarkModeBgColor2,
             ),
             onPressed: () {},
-            child: const Text('Check for update')), //kDarkModeBgColor2
+            child: const Text('Check for update')),
         const SizedBox(height: 24.0),
       ]),
     );

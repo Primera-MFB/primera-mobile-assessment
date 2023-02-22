@@ -7,33 +7,26 @@ import 'package:flutter/services.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
-class HomeBody extends StatefulWidget {
-  const HomeBody({Key? key, required}) : super(key: key);
+class HomeWrapper extends StatefulWidget {
+  const HomeWrapper({Key? key, required}) : super(key: key);
 
   @override
-  HomeBodyState createState() => HomeBodyState();
+  HomeWrapperState createState() => HomeWrapperState();
 }
 
-class HomeBodyState extends State<HomeBody> {
+class HomeWrapperState extends State<HomeWrapper> {
   int _selectedIndex = 0;
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   late TabsRouter tabsRouter;
 
-  Future<bool> _systemBackButtonPressed() {
-    if (_selectedIndex > 0) {
-      setState(() {
-        _selectedIndex = 0;
-      });
-      tabsRouter.setActiveIndex(0);
-    } else {
-      SystemChannels.platform.invokeMethod<void>('SystemNavigator.pop');
-    }
-    return Future.value(false);
-  }
-
   @override
   void initState() {
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 
   @override
@@ -92,8 +85,15 @@ class HomeBodyState extends State<HomeBody> {
     );
   }
 
-  @override
-  void dispose() {
-    super.dispose();
+  Future<bool> _systemBackButtonPressed() {
+    if (_selectedIndex > 0) {
+      setState(() {
+        _selectedIndex = 0;
+      });
+      tabsRouter.setActiveIndex(0);
+    } else {
+      SystemChannels.platform.invokeMethod<void>('SystemNavigator.pop');
+    }
+    return Future.value(false);
   }
 }
