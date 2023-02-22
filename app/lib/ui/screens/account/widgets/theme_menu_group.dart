@@ -17,22 +17,27 @@ class ThemeMenuGroup extends StatelessWidget {
       ),
       child: Column(
         children: [
-          MenuItem(
-            itemName: context.read<ThemeCubit>().themeModeName,
-            iconData: Icons.phonelink_setup,
-            trailing: Switch.adaptive(
-                key: const ValueKey('theme-switch'),
-                activeColor: Theme.of(context).primaryColor,
-                value: context.read<ThemeCubit>().isDarkMode,
-                onChanged: (value) {
-                  if (kDebugMode) {
-                    print('Dark mode: $value');
-                  }
-                  context
-                      .read<ThemeCubit>()
-                      .siwtchTheme(value ? ThemeDark() : ThemeLight());
-                }),
-          ),
+          BlocBuilder<ThemeCubit, ThemeState>(
+            builder: (context, state) {
+              return MenuItem(
+                itemName: context.read<ThemeCubit>().themeModeName,
+                iconData: Icons.phonelink_setup,
+                trailing: Switch.adaptive(
+                  key: const ValueKey('theme-switch'),
+                  activeColor: Theme.of(context).primaryColor,
+                  value: context.read<ThemeCubit>().isDarkMode,
+                  onChanged: (value) {
+                    if (kDebugMode) {
+                      print('Dark mode: $value');
+                    }
+                    context
+                        .read<ThemeCubit>()
+                        .switchTheme(value ? ThemeDark() : ThemeLight());
+                  },
+                ),
+              );
+            },
+          )
         ],
       ),
     );

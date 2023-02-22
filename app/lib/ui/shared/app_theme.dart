@@ -9,14 +9,14 @@ class AppTheme {
       primarySwatch: Colors.blue,
       primaryColorDark: kPrimaryColor100,
       accentColor: kSecondaryColor100,
-      cardColor: kNeutralBgColor,
+      cardColor: kNeutralColor,
       backgroundColor: kPastelBgColor,
       errorColor: kAccentRedColor100,
       brightness: Brightness.light,
     ),
     brightness: Brightness.light,
     primaryColor: kPrimaryColor100,
-    cardColor: kNeutralBgColor,
+    cardColor: kNeutralColor,
     scaffoldBackgroundColor: kPastelBgColor,
     textTheme: TextTheme(
       displayLarge: kDisplayLargeText.copyWith(color: kTextColor100),
@@ -41,20 +41,31 @@ class AppTheme {
           kLabelSmallText.copyWith(color: kTextColor100), //a.ka. overline
     ),
     appBarTheme: AppBarTheme(
-      color: kNeutralBgColor,
+      color: kNeutralColor,
       elevation: 0,
       iconTheme: const IconThemeData(color: kTextColor100, size: 24),
       centerTitle: true,
       toolbarTextStyle: kBodyRegularText,
       titleTextStyle: kTitleLargeText.copyWith(color: kTextColor100),
     ),
-    bottomAppBarTheme: const BottomAppBarTheme(color: kNeutralBgColor),
-    switchTheme: const SwitchThemeData(
-      trackColor: MaterialStatePropertyAll(kPrimaryColor100),
-      thumbColor: MaterialStatePropertyAll(kPrimaryColor100),
-      // overlayColor,
-      // double? splashRadius,
-      // MaterialStateProperty<Icon?>? thumbIcon,
+    bottomAppBarTheme: const BottomAppBarTheme(color: kNeutralColor),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: kPrimaryColor100,
+        foregroundColor: kNeutralColor,
+        textStyle: kLabelLargeText.copyWith(fontWeight: FontWeight.w500),
+      ),
+    ),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        backgroundColor: Colors.transparent,
+        foregroundColor: kPrimaryColor100,
+        textStyle: kLabelLargeText.copyWith(fontWeight: FontWeight.w500),
+        side: const BorderSide(
+          color: kPrimaryColor100,
+          style: BorderStyle.solid,
+        ),
+      ),
     ),
   );
 
@@ -103,5 +114,23 @@ class AppTheme {
       titleTextStyle: kTitleLargeText.copyWith(color: kDarkModeTextColor),
     ),
     bottomAppBarTheme: const BottomAppBarTheme(color: kDarkModeBgColor),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: kDarkModePrimaryColor100,
+        foregroundColor: kNeutralColor,
+        textStyle: kLabelLargeText.copyWith(fontWeight: FontWeight.w500),
+      ),
+    ),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        backgroundColor: Colors.transparent,
+        foregroundColor: kDarkModePrimaryColor100,
+        textStyle: kLabelLargeText.copyWith(fontWeight: FontWeight.w500),
+        side: const BorderSide(
+          color: kPrimaryColor100,
+          style: BorderStyle.solid,
+        ),
+      ),
+    ),
   );
 }

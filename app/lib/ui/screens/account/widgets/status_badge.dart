@@ -26,7 +26,7 @@ class StatusBadge extends StatelessWidget {
         statusName,
         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
               color: Theme.of(context).brightness == Brightness.light
-                  ? kNeutralBgColor
+                  ? kNeutralColor
                   : kDarkModeTextColor,
               fontWeight: FontWeight.w500,
             ),

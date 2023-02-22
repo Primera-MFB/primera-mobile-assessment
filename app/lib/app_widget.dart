@@ -4,6 +4,7 @@ import 'package:app/ui/shared/app_theme.dart';
 import 'package:app/ui/shared/cubit/theme/theme_cubit.dart';
 import 'package:app/ui/shared/styles.dart';
 import 'package:app/ui/shared/ui_config.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -25,7 +26,9 @@ class _AppWidgetState extends State<AppWidget> {
   Widget build(BuildContext context) {
     return BlocConsumer<ThemeCubit, ThemeState>(
       listener: (context, state) {
-        log('Theme switched: $state');
+        if (kDebugMode) {
+          print('Theme switched: $state');
+        }
       },
       builder: (context, state) {
         return MaterialApp.router(

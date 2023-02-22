@@ -12,7 +12,7 @@ class ThemeCubit extends Cubit<ThemeState> {
     _themeMode = ThemeMode.system;
   }
 
-  void siwtchTheme(ThemeState selectedTheme) {
+  void switchTheme(ThemeState selectedTheme) {
     if (selectedTheme is ThemeDark) {
       _themeMode = ThemeMode.dark;
     } else if (selectedTheme is ThemeLight) {

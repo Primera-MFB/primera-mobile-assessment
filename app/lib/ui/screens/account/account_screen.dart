@@ -1,5 +1,4 @@
 import 'package:app/ui/screens/account/account.dart';
-import 'package:app/ui/screens/account/widgets/others_menu_group.dart';
 import 'package:flutter/material.dart';
 
 class AccountTabScreen extends StatelessWidget {
@@ -23,15 +22,17 @@ class AccountTabScreen extends StatelessWidget {
     );
   }
 
-  List<MenuGroup> _widgetMenuList() {
-    return <MenuGroup>[
+  List<Widget> _widgetMenuList() {
+    return [
       const MenuGroup(groupTitle: 'Account', child: AccountMenuGroup()),
       const MenuGroup(groupTitle: 'Security', child: SecurityMenuGroup()),
       const MenuGroup(groupTitle: 'Finance', child: FinanceMenuGroup()),
       const MenuGroup(groupTitle: 'Theme', child: ThemeMenuGroup()),
       const MenuGroup(groupTitle: 'Others', child: OthersMenuGroup()),
+      const SizedBox(height: 24.0),
+      const CheckUpdate()
     ];
   }
 
-  List<MenuGroup> get widgetMenuList => _widgetMenuList();
+  List<Widget> get widgetMenuList => _widgetMenuList();
 }

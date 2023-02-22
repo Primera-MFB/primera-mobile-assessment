@@ -57,7 +57,7 @@ const kSuccessGreenColor = Color(0xFF00C268);
 // pastel
 const kPastelBgColor = Color(0xFFF9F9FB);
 const kPastelBg2Color = Color(0xFFF0F2FE);
-const kNeutralBgColor = Color(0xFFFFFFFF);
+const kNeutralColor = Color(0xFFFFFFFF);
 
 // warning variation
 const kWarningColor100 = Color(0xFFFFB519);
