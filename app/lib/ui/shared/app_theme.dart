@@ -6,7 +6,6 @@ class AppTheme {
 
   static ThemeData themeLight = ThemeData.light().copyWith(
     colorScheme: ColorScheme.fromSwatch(
-      primarySwatch: Colors.blue,
       primaryColorDark: kPrimaryColor100,
       accentColor: kSecondaryColor100,
       cardColor: kNeutralColor,
@@ -16,6 +15,7 @@ class AppTheme {
     ),
     brightness: Brightness.light,
     primaryColor: kPrimaryColor100,
+    primaryColorDark: kPrimaryColor100,
     cardColor: kNeutralColor,
     scaffoldBackgroundColor: kPastelBgColor,
     textTheme: TextTheme(
@@ -41,12 +41,12 @@ class AppTheme {
           kLabelSmallText.copyWith(color: kTextColor100), //a.ka. overline
     ),
     appBarTheme: AppBarTheme(
-      color: kNeutralColor,
       elevation: 0,
       iconTheme: const IconThemeData(color: kTextColor100, size: 24),
       centerTitle: true,
       toolbarTextStyle: kBodyRegularText,
       titleTextStyle: kTitleLargeText.copyWith(color: kTextColor100),
+      backgroundColor: Colors.transparent,
     ),
     bottomAppBarTheme: const BottomAppBarTheme(color: kNeutralColor),
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -80,6 +80,7 @@ class AppTheme {
     ),
     brightness: Brightness.dark,
     primaryColor: kDarkModePrimaryColor100,
+    primaryColorDark: kDarkModePrimaryColor100,
     cardColor: kDarkModeBgColor2,
     scaffoldBackgroundColor: kDarkModeBgColor,
     textTheme: TextTheme(
@@ -106,12 +107,12 @@ class AppTheme {
           kLabelSmallText.copyWith(color: kDarkModeTextColor), //a.ka. overline
     ),
     appBarTheme: AppBarTheme(
-      color: kDarkModeBgColor,
       elevation: 0,
       iconTheme: const IconThemeData(color: kDarkModeTextColor, size: 24),
       centerTitle: true,
       toolbarTextStyle: kBodyRegularText,
       titleTextStyle: kTitleLargeText.copyWith(color: kDarkModeTextColor),
+      backgroundColor: Colors.transparent,
     ),
     bottomAppBarTheme: const BottomAppBarTheme(color: kDarkModeBgColor),
     elevatedButtonTheme: ElevatedButtonThemeData(

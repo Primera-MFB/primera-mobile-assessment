@@ -1,5 +1,4 @@
-import 'dart:developer';
-
+import 'package:app/ui/router/router.gr.dart';
 import 'package:app/ui/shared/app_theme.dart';
 import 'package:app/ui/shared/cubit/theme/theme_cubit.dart';
 import 'package:app/ui/shared/styles.dart';
@@ -9,14 +8,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppWidget extends StatefulWidget {
-  final appRouter;
-  AppWidget({Key? key, required this.appRouter});
+  final AppRouter appRouter;
+  const AppWidget({super.key, required this.appRouter});
 
   @override
-  _AppWidgetState createState() => _AppWidgetState();
+  AppWidgetState createState() => AppWidgetState();
 }
 
-class _AppWidgetState extends State<AppWidget> {
+class AppWidgetState extends State<AppWidget> {
   @override
   void initState() {
     super.initState();

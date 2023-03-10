@@ -72,7 +72,7 @@ class HomeWrapperState extends State<HomeWrapper> {
               text: 'Investments',
             ),
             FABBottomAppBarItem(
-              iconData: Icons.credit_card,
+              iconData: Icons.clean_hands,
               text: 'Loans',
             ),
             FABBottomAppBarItem(

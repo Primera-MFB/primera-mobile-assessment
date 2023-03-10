@@ -18,7 +18,7 @@ class MenuGroup extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 16.0),
           child: Text(
             groupTitle,
-            style: Theme.of(context).textTheme.bodyLarge,
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w400),
             textAlign: TextAlign.left,
           ),
         ),

@@ -23,6 +23,10 @@ const kPrimaryColor20 = Color(0xFFC0D5F7);
 const kPrimaryColor10 = Color(0xFFEDF3FD);
 const kSecondaryColor100 = Color(0xFF0FB583);
 
+// icon
+const kIconBlue = Color(0xFF0556DA);
+const kIconGreen = Color(0xFF009946);
+
 // text color
 const kTextColor100 = Color(0xFF02060E);
 const kTextColor80 = Color(0xFF323232);
@@ -110,6 +114,14 @@ const kHeadlineSmallText = TextStyle(
   fontWeight: FontWeight.w500,
   fontFamily: 'Satoshi',
 );
+const kCurrencyText = TextStyle(
+  color: kDarkModeTextColor,
+  fontSize: 28.0,
+  letterSpacing: 0,
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w500,
+  fontFamily: 'Arial',
+);
 
 const kTitleLargeText = TextStyle(
   fontSize: 22.0,
@@ -137,7 +149,7 @@ const kBodyLargeText = TextStyle(
   fontSize: 16.0,
   letterSpacing: 0,
   fontStyle: FontStyle.normal,
-  fontWeight: FontWeight.w400,
+  fontWeight: FontWeight.w500,
   fontFamily: 'Satoshi',
 );
 const kBodyMediumText = TextStyle(
